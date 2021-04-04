@@ -1,0 +1,41 @@
+::ng-deep .search-box-wrapper {
+  border-radius: 70px;
+  background: #fff;
+  position: absolute;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 95px;
+  bottom: 30px;
+  color: #000;
+}
+
+::ng-deep input {
+  border: none;
+}
+
+::ng-deep i:not(:last-child) {
+  font-size: 21px;
+  color: rgb(172, 172, 172);
+}
+
+::ng-deep span {
+  font-weight: 500;
+}
+
+::ng-deep .btn-search {
+  background: rgb(160, 9, 206);
+  background: linear-gradient(
+    90deg,
+    rgb(99, 0, 228) 0%,
+    rgb(18, 0, 65) 100%
+  );
+  border-radius: 50%;
+  color: #fff!important;
+  font-weight: 600;
+}
+/* ::ng-deep .search-box{
+    position: absolute;
+    width: 45px;
+} */

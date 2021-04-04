@@ -1,0 +1,18 @@
+::ng-deep .car-wrapper{
+    border: 0.01rem solid rgba(0, 0, 0, 0.096);
+    border-radius: 5px;
+    padding: 7px;
+    margin-bottom: 7px;
+}
+
+::ng-deep .car-header{
+
+}
+
+::ng-deep .car-body {
+
+}
+
+::ng-deep .car-footer {
+
+}

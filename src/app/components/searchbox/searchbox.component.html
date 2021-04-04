@@ -1,0 +1,66 @@
+<div class="search-box-wrapper shadow-sm position-relative">
+  <div class="row m-auto h-100 px-3">
+    <div class="col-3 m-auto">
+      <div class="d-flex">
+        <i class="bi bi-geo-alt my-auto"></i>
+        <div class="d-flex flex-column px-2">
+          <span class="text-secondary">Where</span>
+          <div class="dropdown">
+            <button
+              class="btn p-0 dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              İstanbul
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-3 m-auto">
+      <div class="d-flex">
+        <i class="bi bi-calendar my-auto"></i>
+        <div class="d-flex flex-column px-2">
+          <span class="text-secondary">Arrival</span>
+          <input type="date" class="w-100 d-nsone" id="datetime-local" />
+        </div>
+      </div>
+    </div>
+    <div class="col-3 m-auto">
+      <div class="d-flex">
+        <i class="bi bi-calendar my-auto"></i>
+        <div class="d-flex flex-column px-2">
+          <span class="text-secondary">Departure</span>
+          <input type="date" class="w-100 d-nsone" id="datetime-local" />
+        </div>
+      </div>
+    </div>
+    <div class="col-2 m-auto">
+      <div class="d-flex">
+        <i class="bi bi-truck"></i>
+        <div class="d-flex flex-column px-2">
+          <span class="text-secondary">Vehicle</span>
+          <span>Any</span>
+          <div class="car-type" *ngIf="!dataLoaded">
+            <ul>
+              <li *ngFor="let car of cars">{{ car.description }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-1 m-auto">
+      <button class="btn btn-search shadow-lg"><i class="bi shadow h3 bi-search my-auto"></i></button>
+    </div>
+  </div>
+  <!-- <div class="search-box d-flex justify-content-center w-100">
+        <input type="text" class="form-control" placeholder="Search For Car" aria-label="Search">
+    </div> -->
+</div>
