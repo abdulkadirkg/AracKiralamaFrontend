@@ -3,6 +3,16 @@
     border-radius: 5px;
     padding: 7px;
     margin-bottom: 7px;
+    position: relative;
+}
+
+::ng-deep .price{
+    position: absolute;
+    left: 255px;
+    top:50px;
+    padding: 5px 8px;
+    border-radius: 15px;
+    font-size: 14px;
 }
 
 ::ng-deep .car-header{

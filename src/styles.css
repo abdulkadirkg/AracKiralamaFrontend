@@ -15,6 +15,11 @@
     font-family: var(--defaultFont);
 }
 
+a{
+  text-decoration: none!important;
+  color: black;
+}
+
 body{
     background: var(--defaultBg)!important;
     

@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +17,12 @@ import { SearchboxComponent } from './components/searchbox/searchbox.component';
 import { ShowroomComponent } from './components/showroom/showroom.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { HomeComponent } from './components/home/home.component';
+import { ColorComponent } from './components/color/color.component';
+import { SubPageComponent } from './components/sub-page/sub-page.component';
+
+import { ToastrModule } from 'ngx-toastr';
+import { SubNaviComponent } from './components/sub-navi/sub-navi.component';
+import { CarDetailComponent } from './components/car-detail/car-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,14 +35,21 @@ import { HomeComponent } from './components/home/home.component';
     SearchboxComponent,
     ShowroomComponent,
     TimelineComponent,
-    HomeComponent
+    HomeComponent,
+    ColorComponent,
+    SubPageComponent,
+    SubNaviComponent,
+    CarDetailComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right',
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

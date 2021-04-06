@@ -8,15 +8,16 @@
       <div class="col-4">
         <img
           src="https://localhost:44389/{{ car.carImages[0]?.imagePath }}"
-          class="w-100 rounded"
+          class="w-100 rounded shadow-sm"
           alt="car-image"
         />
+        <span class="price bg-warning fw-bold shadow-sm">{{car.dailyPrice}} ₺</span>
       </div>
       <div class="col-8 my-auto text-muted">
         <span class="d-block my-auto fw-bold text-danger">{{car.brandName}}</span>
-        <span class="d-block my-auto"><i class="bi bi-info-circle"></i> Depozito: <b>1000₺</b></span>
-        <span class="d-block my-auto"><i class="bi bi-info-circle"></i> Toplam KM Sınırı: <b>1500 KM</b></span>
-        <span class="d-block my-auto"><i class="bi bi-info-circle"></i> Teslimat: <b>Ofis</b></span>
+        <span class="d-block my-auto"><i class="bi bi-info-circle"></i> Deposit: <b>1000₺</b></span>
+        <span class="d-block my-auto"><i class="bi bi-info-circle"></i> Total KM Limit: <b>1500 KM</b></span>
+        <span class="d-block my-auto"><i class="bi bi-info-circle"></i> Pick-Up: <b>Ofis</b></span>
         {{ car.description }}
       </div>
     </div>
@@ -29,7 +30,7 @@
         <i class="bi bi-wallet2 m-auto"></i> Economy
       </div>
       <div class="col-8">
-        <button class="btn w-100 btn-primary fw-bold">Rent</button>
+        <button class="btn w-100 btn-primary"><b><i class="bi bi-check2-circle"></i> Rent</b></button>
       </div>
     </div>
   </div>
