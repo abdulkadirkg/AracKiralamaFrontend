@@ -30,14 +30,12 @@ export class CarComponent implements OnInit {
   getCars() {
     this.carService.getCars().subscribe((response) => {
       (this.cars = response.data), (this.dataLoaded = true);
-      console.log(response);
     });
   }
 
   getCarsById(carId: number) {
     this.carService.getCarsById(carId).subscribe((response) => {
-      this.cars = response.data,
-      this.dataLoaded = true
+      (this.cars[0] = response.data), (this.dataLoaded = true);
     });
   }
 }

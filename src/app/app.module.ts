@@ -23,6 +23,8 @@ import { SubPageComponent } from './components/sub-page/sub-page.component';
 import { ToastrModule } from 'ngx-toastr';
 import { SubNaviComponent } from './components/sub-navi/sub-navi.component';
 import { CarDetailComponent } from './components/car-detail/car-detail.component';
+import { SwiperModule } from 'swiper/angular';
+import { RentalComponent } from './components/rental/rental.component';
 
 @NgModule({
   declarations: [
@@ -40,11 +42,14 @@ import { CarDetailComponent } from './components/car-detail/car-detail.component
     SubPageComponent,
     SubNaviComponent,
     CarDetailComponent,
+    RentalComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    SwiperModule,
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right',
     }),

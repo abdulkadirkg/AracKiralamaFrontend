@@ -4,8 +4,8 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 :root{
     --defaultFont : 'Poppins', sans-serif ;
-    /* --defaultBg : #b4d3ff3b ; */
-    --defaultBg : linear-gradient(60deg, rgba(83, 58, 183, 0.37) 0%, rgba(0, 171, 193, 0.37) 100%); ;
+    --defaultBg : #b4d3ff3b ;
+    /* --defaultBg : linear-gradient(60deg, rgba(83, 58, 183, 0.37) 0%, rgba(0, 171, 193, 0.37) 100%); ; */
 }
 
 *{
@@ -25,6 +25,14 @@ body{
     
 }
 
+.btn {
+    box-shadow: 0 0 3px 0px #0000001f;
+}
+
+.no-border{
+  border: none !important;
+}
+
 .f-l{
     font-weight: lighter!important;
 }
@@ -40,6 +48,7 @@ header{
 .border-main{
     padding: 5px;
     border-radius: 7px;
+    border:1px solid rgb(194, 194, 194);
 }
 
 .landing{
