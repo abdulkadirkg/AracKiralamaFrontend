@@ -25,6 +25,9 @@ import { SubNaviComponent } from './components/sub-navi/sub-navi.component';
 import { CarDetailComponent } from './components/car-detail/car-detail.component';
 import { SwiperModule } from 'swiper/angular';
 import { RentalComponent } from './components/rental/rental.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { FilterBrandPipe } from './pipes/filter-brand.pipe';
+import { FilterColorPipe } from './pipes/filter-color.pipe';
 
 @NgModule({
   declarations: [
@@ -43,6 +46,9 @@ import { RentalComponent } from './components/rental/rental.component';
     SubNaviComponent,
     CarDetailComponent,
     RentalComponent,
+    FilterPipe,
+    FilterBrandPipe,
+    FilterColorPipe,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +56,7 @@ import { RentalComponent } from './components/rental/rental.component';
     HttpClientModule,
     BrowserAnimationsModule,
     SwiperModule,
+    FormsModule,
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right',
     }),

@@ -9,7 +9,10 @@
           data-bs-ride="carousel"
         >
           <div class="carousel-inner">
-            <div class="carousel-item active" *ngFor="let image of car.carImages">
+            <div
+              class="carousel-item active"
+              *ngFor="let image of car.carImages"
+            >
               <img
                 src="https://localhost:44389/{{ image.imagePath }}"
                 class="w-100 rounded"
@@ -50,7 +53,23 @@
             >{{ car.dailyPrice + ",00" }} ₺</span
           >
           <small class="mt-0 mb-2 text-secondary">*per day</small>
-          <button (click)="rentCar(car)" class="btn w-50 btn-success">
+          <div class="d-flex flex-row border rounded mb-4 m-2 p-2">
+            <div class="d-flex">
+              <i class="bi bi-calendar my-auto"></i>
+              <div class="d-flex flex-column px-2">
+                <span class="text-secondary">Arrival</span>
+                <input [(ngModel)]="rentDate" type="date" [value]="rentDate" class="w-100 d-nsone" id="datetime-local" />
+              </div>
+            </div>
+            <div class="d-flex">
+              <i class="bi bi-calendar my-auto"></i>
+              <div class="d-flex flex-column px-2">
+                <span class="text-secondary">Departure</span>
+                <input [(ngModel)]="returnDate" type="date" class="w-100 d-nsone" [value]="returnDate" id="datetime-local" />
+              </div>
+            </div>
+          </div>
+          <button (click)="rentCar(car)" class="btn w-75 shadow-sm btn-success">
             Rent and Go! <i class="bi bi-hand-thumbs-up-fill"></i>
           </button>
         </div>

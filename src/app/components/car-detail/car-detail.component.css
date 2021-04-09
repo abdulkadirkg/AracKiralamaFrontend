@@ -1,1 +1,14 @@
 @import '~swiper/swiper-bundle';
+
+::ng-deep input {
+  border: none;
+}
+
+::ng-deep i:not(:last-child) {
+  font-size: 21px;
+  color: rgb(172, 172, 172);
+}
+
+::ng-deep span {
+  font-weight: 500;
+}

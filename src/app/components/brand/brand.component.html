@@ -1,6 +1,6 @@
 <div class="list-group shadow-sm">
   <li class="list-group-item bg-light fw-bold">Brands</li>
-  <a routerLink="/brands" class="list-group-item list-group-item-action" aria-current="true" *ngFor="let brand of brands">
+  <li class="list-group-item list-group-item-action btn" (click)="selectBrand(brand)" aria-current="true" *ngFor="let brand of brands">
      {{brand.brandName}}
-  </a>
+  </li>
 </div>

@@ -15,14 +15,8 @@
     font-size: 14px;
 }
 
-::ng-deep .car-header{
-
-}
-
-::ng-deep .car-body {
-
-}
-
-::ng-deep .car-footer {
-
+.filters{
+    background: rgb(241, 241, 241);
+    border:1px dotted rgb(184, 184, 184);
+    border-radius: 7px;
 }

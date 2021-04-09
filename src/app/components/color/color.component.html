@@ -1,11 +1,10 @@
 <div class="list-group shadow-sm mt-3">
   <li class="list-group-item bg-light fw-bold">Colors</li>
-  <a
-    routerLink="/colors"
-    class="list-group-item list-group-item-action"
+  <li
+    class="list-group-item list-group-item-action btn"
     aria-current="true"
     *ngFor="let color of colors"
   >
     {{ color.colorName }}
-  </a>
+  </li>
 </div>

@@ -1,36 +1,63 @@
-<div class="car-wrapper" *ngFor="let car of cars">
-  <div class="car-header">
-    <span class="fw-bold d-block">{{ car.carName }}</span>
-    <span class="text-muted fw-light">or similar</span>
-  </div>
-  <div class="car-body">
-    <div class="row">
-      <div class="col-4">
-        <img
-          src="https://localhost:44389/{{ car.carImages[0]?.imagePath }}"
-          class="w-100 rounded shadow-sm"
-          alt="car-image"
-        />
-        <span class="price bg-warning fw-bold shadow-sm">{{car.dailyPrice}} ₺</span>
-      </div>
-      <div class="col-8 my-auto text-muted">
-        <span class="d-block my-auto fw-bold text-danger">{{car.brandName}}</span>
-        <span class="d-block my-auto"><i class="bi bi-info-circle"></i> Deposit: <b>1000₺</b></span>
-        <span class="d-block my-auto"><i class="bi bi-info-circle"></i> Total KM Limit: <b>1500 KM</b></span>
-        <span class="d-block my-auto"><i class="bi bi-info-circle"></i> Pick-Up: <b>Ofis</b></span>
-        {{ car.description }}
+<div class="d-block filters p-2 my-2 shadow-sm" *ngIf="filteredBrands.length>0">
+  Filters:
+  <span class="badge btn badge-danger h1 bg-light my-0 border text-dark fw-light mx-2" (click)="removeFromFiltered(brand)" *ngFor="let brand of filteredBrands">
+    <i class="bi bi-x-circle-fill"></i> {{brand.brandName}}
+  </span>
+</div>
+<div class="border-main shadow bg-light">
+  <div
+    class="car-wrapper"
+    *ngFor="let car of cars | filterBrand:filteredBrands"
+  >
+    <div class="car-header">
+      <span class="fw-bold d-block">{{ car.carName }}</span>
+      <span class="text-muted fw-light">or similar</span>
+    </div>
+    <div class="car-body">
+      <div class="row">
+        <div class="col-4">
+          <img
+            *ngIf="dataLoaded"
+            src="https://localhost:44389/{{ car.carImages[0]?.imagePath }}"
+            class="w-100 rounded shadow-sm"
+            alt="car-image"
+          />
+          <span class="price bg-warning fw-bold shadow"
+            >{{ car.dailyPrice }} ₺</span
+          >
+        </div>
+        <div class="col-8 my-auto text-muted">
+          <span class="d-block my-auto fw-bold text-danger">{{
+            car.brandName
+          }}</span>
+          <span class="d-block my-auto"
+            ><i class="bi bi-info-circle"></i> Deposit: <b class="text-dark">1000₺</b></span
+          >
+          <span class="d-block my-auto"
+            ><i class="bi bi-info-circle"></i> Total KM Limit:
+            <b class="text-dark">1500 KM</b></span
+          >
+          <span class="d-block my-auto"
+            ><i class="bi bi-info-circle"></i> Pick-Up: <b class="text-dark">Ofis</b></span
+          >
+          {{ car.description }}
+        </div>
       </div>
     </div>
-  </div>
-  <div class="car-footer">
-    <div class="row">
-      <div class="col-4 small text-muted my-auto align-items-center d-flex justify-content-around">
-        <i class="bi bi-gear m-auto"></i> Manuel
-        <i class="bi bi-door-closed m-auto"></i> Gas
-        <i class="bi bi-wallet2 m-auto"></i> Economy
-      </div>
-      <div class="col-8">
-        <a class="btn w-100 btn-primary" routerLink="car/{{car.id}}"><b><i class="bi bi-check2-circle"></i> Rent</b></a>
+    <div class="car-footer">
+      <div class="row">
+        <div
+          class="col-4 small text-muted my-auto align-items-center d-flex justify-content-around"
+        >
+          <i class="bi bi-gear m-auto"></i> Manuel
+          <i class="bi bi-door-closed m-auto"></i> Gas
+          <i class="bi bi-wallet2 m-auto"></i> Economy
+        </div>
+        <div class="col-8">
+          <a class="btn shadow w-100 btn-primary" routerLink="car/{{ car.id }}"
+            ><b><i class="bi bi-check2-circle"></i> Rent</b></a
+          >
+        </div>
       </div>
     </div>
   </div>
