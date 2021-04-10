@@ -4,7 +4,8 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 :root{
     --defaultFont : 'Poppins', sans-serif ;
-    --defaultBg : #b4d3ff3b ;
+    --defaultBg : url("assets/img/bg.png"), no-repeat;
+    /* --defaultBg : #b4d3ff3b ; */
     /* --defaultBg : linear-gradient(60deg, rgba(83, 58, 183, 0.37) 0%, rgba(0, 171, 193, 0.37) 100%); ; */
 }
 
@@ -22,7 +23,7 @@ a{
 
 body{
     background: var(--defaultBg)!important;
-    
+    background-size: 25px!important;
 }
 
 .btn {

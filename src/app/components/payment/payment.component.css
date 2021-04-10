@@ -1,0 +1,242 @@
+/*--------------------
+General Style
+---------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.subject {
+  color: rgba(255, 255, 255, 0.02);
+  font-size: 180px;
+  font-size: 16vw;
+  letter-spacing: -4px;
+  line-height: 0.9;
+  z-index: -1;
+}
+
+/*--------------------
+Text
+---------------------*/
+
+.checkout {
+  width: 100%;
+  margin: auto;
+  background-color: #dddfe6;
+  overflow: hidden;
+
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+
+  -webkit-box-shadow: 0 30px 48px rgba(37, 44, 65, 0.32);
+  -moz-box-shadow: 0 30px 48px rgba(37, 44, 65, 0.32);
+  box-shadow: 0 30px 48px rgba(37, 44, 65, 0.32);
+}
+
+.order {
+  width: 50%;
+  padding: 0 30px;
+  float: left;
+  background-color: #f4f5f9;
+  z-index: 1;
+  overflow: auto;
+  -webkit-box-shadow: 0 15px 24px rgba(37, 44, 65, 0.16);
+  -moz-box-shadow: 0 15px 24px rgba(37, 44, 65, 0.16);
+  box-shadow: 0 15px 24px rgba(37, 44, 65, 0.16);
+}
+
+ul.order-list {
+  width: 100%;
+  height: 205px;
+  list-style: none;
+  overflow-y: scroll;
+  padding-right: 12px;
+}
+
+ul.order-list li {
+  margin-left: -40px;
+  overflow: hidden;
+  border-bottom: 1px solid #e9ebf2;
+}
+
+ul.order-list li > img {
+  width: 100%;
+  float: left;
+}
+
+/*--------------------
+Payment
+---------------------*/
+
+.payment {
+  z-index: 0;
+  width: 50%;
+  position: relative;
+  float: right;
+}
+
+.card {
+  width: 300px;
+  height: 178px;
+  position: relative;
+  margin: 0 auto;
+  background-color: #f1404b;
+  overflow: hidden;
+  z-index: 1;
+
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+
+  -webkit-box-shadow: 0 15px 24px rgba(37, 44, 65, 0.32);
+  -moz-box-shadow: 0 15px 24px rgba(37, 44, 65, 0.32);
+  box-shadow: 0 15px 24px rgba(37, 44, 65, 0.32);
+}
+
+.card-content {
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  float: left;
+  z-index: 1;
+}
+
+#logo-visa {
+  position: relative;
+  margin-top: -20px;
+  left: 190px;
+}
+
+.card-form {
+  width: 100%;
+  position: relative;
+  float: right;
+  padding: 15px 35px;
+}
+
+.card-form > p.field {
+  height: 48px;
+  padding: 2px 10px;
+  margin-bottom: 2px;
+  background-color: #f4f5f9;
+  border: 1px solid #d2d4de;
+  display: inline-block;
+
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+input[type="text"] {
+  margin:15px 0;
+  padding: 15px;
+  font-size: 21px;
+  width: 100%;
+  border-radius: 7px;
+  border: 1px solid #dcdcdc;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: 600;
+  text-align: center;
+}
+
+input[type="text"]:focus {
+  border:1px solid green;
+}
+
+::-webkit-input-placeholder {
+  color: #dddfe6;
+}
+:-moz-placeholder {
+  color: #dddfe6;
+}
+::-moz-placeholder {
+  color: #dddfe6;
+}
+:-ms-input-placeholder {
+  color: #dddfe6;
+}
+
+#i-cardfront,
+#i-cardback,
+#i-calendar {
+  position: relative;
+  top: 8px;
+  margin: auto;
+  z-index: 1;
+}
+
+#cardnumber {
+  width: 244px;
+}
+
+#cardexpiration {
+  width: 114px;
+}
+
+#cardcvc {
+  width: 60px;
+}
+
+.space {
+  margin-right: 10px;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.button-cta {
+  width: 100%;
+  height: 65px;
+  padding: 10px 20px;
+  background-color: #f1404b;
+  border: 1px solid #f1404b;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #f4f5f9;
+    margin-top: 45px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.button-cta:hover {
+  background: rgba(193, 14, 26, 1);
+  border: 1px solid rgba(193, 14, 26, 1);
+}
+
+.button-cta span {
+  display: inline-block;
+  position: relative;
+
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.button-cta span:after {
+  content: "→";
+  color: #f4f5f9;
+  position: absolute;
+  opacity: 0;
+  bottom: 0;
+
+  right: -40px;
+}
+
+.button-cta:hover span {
+  padding-right: 45px;
+}
+
+.button-cta:hover span:after {
+  opacity: 1;
+  right: 0;
+}

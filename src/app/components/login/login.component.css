@@ -1,0 +1,59 @@
+.box{
+	box-shadow: 0 3px 15px 0 rgba(43,53,72,.2);
+	padding: 20px;
+	width: 100%;
+	border-radius: 5px;
+	background: #fff;
+	max-width: 450px;
+}
+
+img{
+	width: 128px;
+
+}
+
+.top-title{
+	border-bottom: 5px solid #2a3979;
+	font-weight: bolder;
+}
+
+.murakib-title{
+	font-weight: bolder;
+	color: #b70007;
+	text-shadow: 0 0 3px red;
+}
+
+label{
+	color:#000000;
+    font-weight: 600;
+}
+
+input{
+	width: 100%;
+	font-size: 16px;
+	font-weight: 300;
+	color: #2b3548;
+	height: 40px;
+	border: none;
+	border-bottom: 1px solid #e2e9f1;
+	margin-bottom: 10px;
+}
+
+input:focus{
+	outline: none;
+	border-bottom : 2px solid rgba(43,53,72,.6);
+}
+
+button{
+	margin-top: 10px;
+	cursor: pointer;
+	width: 100%;
+	height: 50px;
+	background: #2a3979!important;
+	color: #fff!important;
+	border-radius: 4px;
+	font-size: 16px;
+	font-weight: 500;
+	outline: none;
+
+}

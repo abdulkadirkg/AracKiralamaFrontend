@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { AuthInterceptor } from './interceptors/auth.interceptor';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { CarComponent } from './components/car/car.component';
 import { BrandComponent } from './components/brand/brand.component';
 import { NaviComponent } from './components/navi/navi.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { SearchboxComponent } from './components/searchbox/searchbox.component';
@@ -28,6 +28,9 @@ import { RentalComponent } from './components/rental/rental.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { FilterBrandPipe } from './pipes/filter-brand.pipe';
 import { FilterColorPipe } from './pipes/filter-color.pipe';
+import { PaymentComponent } from './components/payment/payment.component';
+import { NgPaymentCardModule } from 'ng-payment-card';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +52,8 @@ import { FilterColorPipe } from './pipes/filter-color.pipe';
     FilterPipe,
     FilterBrandPipe,
     FilterColorPipe,
+    PaymentComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,12 +61,15 @@ import { FilterColorPipe } from './pipes/filter-color.pipe';
     HttpClientModule,
     BrowserAnimationsModule,
     SwiperModule,
+    ReactiveFormsModule,
     FormsModule,
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right',
     }),
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
