@@ -1,5 +1,6 @@
 Mail: abdulkadir-karadag@hotmail.com
-LinkedIn: https://linkedin.com/abdulkadirkg
+
+LinkedIn: https://www.linkedin.com/in/abdulkadirkaradag/
 # AracKiralamaFrontent
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
