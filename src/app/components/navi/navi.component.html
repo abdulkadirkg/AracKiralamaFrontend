@@ -15,7 +15,12 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active text-success fw-bold" aria-current="page" href="#">Find Your Car</a>
+          <a
+            class="nav-link active text-success fw-bold"
+            aria-current="page"
+            href="#"
+            >Find Your Car</a
+          >
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Campaigns</a>
@@ -27,7 +32,31 @@
           <a class="nav-link" href="#">Services</a>
         </li>
       </ul>
-      <button class="btn btn-dark text-light border border-secondary" routerLink="/login" type="submit">Log In</button>
+      <button
+        *ngIf="!user"
+        class="btn btn-dark border-secondary text-light bg-dark"
+        routerLink="/login"
+        type="submit"
+      >
+        Log In
+      </button>
+      <!-- <button *ngIf="user" class="btn btn-dark text-light bg-dark" routerLink="/login" type="submit">Log In</button> -->
+      <div class="dropdown bg-dark" *ngIf="user">
+        <button
+          class="btn btn-dark border-secondary dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton1"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          {{ user }}
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark w-100" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" routerLink="/profile"><i class="bi bi-person-circle"></i> Profile</a></li>
+          <li><a class="dropdown-item" routerLink="/reservations"><i class="bi bi-journal-check"></i> Reservations</a></li>
+          <li><a class="dropdown-item bg-danger" routerLink="/logout"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>

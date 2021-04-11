@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/services/auth.service';
 import { SharedService } from 'src/app/services/shared.service';
@@ -15,7 +16,8 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private authService: AuthService,
     private toastrService: ToastrService,
-    private sharedService:SharedService
+    private sharedService:SharedService,
+    private router:Router
   ) {}
 
   ngOnInit(): void {
@@ -36,8 +38,10 @@ export class LoginComponent implements OnInit {
       this.authService.login(loginModel).subscribe(
         (response) => {
           this.sharedService.user = response.user;
-          this.toastrService.info(response.message + " " + response.user);
+          this.toastrService.success(response.message + " " + response.user);
           localStorage.setItem('token', response.data.token);
+          localStorage.setItem('user',response.user);
+          this.router.navigate(['/']);
         },
         (responseError) => {
           this.toastrService.error(responseError.error);

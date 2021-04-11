@@ -1,4 +1,6 @@
-export interface User{
+export interface UserModel{
     email:string;
-    name:string;
+    fistName:string;
+    lastName:string;
+    password:string;
 }

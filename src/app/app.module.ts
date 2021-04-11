@@ -31,6 +31,8 @@ import { FilterColorPipe } from './pipes/filter-color.pipe';
 import { PaymentComponent } from './components/payment/payment.component';
 import { NgPaymentCardModule } from 'ng-payment-card';
 import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +56,8 @@ import { LoginComponent } from './components/login/login.component';
     FilterColorPipe,
     PaymentComponent,
     LoginComponent,
+    RegisterComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

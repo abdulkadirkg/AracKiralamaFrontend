@@ -4,6 +4,7 @@ import { CarDetailComponent } from './components/car-detail/car-detail.component
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { PaymentComponent } from './components/payment/payment.component';
+import { RegisterComponent } from './components/register/register.component';
 import { SubPageComponent } from './components/sub-page/sub-page.component';
 import { CleanerGuard } from './guards/cleaner.guard';
 import { LoginGuard } from './guards/login.guard';
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'brands', component: SubPageComponent },
   { path: 'payment', component: PaymentComponent, canActivate: [LoginGuard,PaymentGuard], canDeactivate:[CleanerGuard] },
   { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
 ];
 
 @NgModule({

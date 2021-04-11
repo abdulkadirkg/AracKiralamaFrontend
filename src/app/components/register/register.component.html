@@ -1,0 +1,30 @@
+<app-sub-navi></app-sub-navi>
+<div class="container h-100 mt-5 w-100 d-flex flex-wrap">
+    <div class="login-box py-3 m-auto">
+        <div class="box">
+        <img src="https://firmanevsehir.com/wp-content/uploads/2019/12/57-579531_car-logo-design-png-wwwpixsharkcom-images-galleries-rent.jpg" class="text-center d-block m-auto" alt="CarRental">
+        <strong class="text-center mt-2 w-100 d-block murakib-title h3">KG Cars</strong>
+            <hr>
+            <span class="d-block text-center mb-4">
+                <h4 class="text-center d-inline-block m-auto w-50 top-title">Register</h4>
+            </span>
+            <form [formGroup]="registerForm">
+                <label for="username">E-Mail</label>
+                <input type="email" autocomplete="off" formControlName="email">
+                <label for="Name">First Name</label>
+                <input type="text" formControlName="firstName" autocomplete="off" id="Name">
+                <label for="LastName">Last Name</label>
+                <input type="text" formControlName="lastName" autocomplete="off" id="LastName">
+                <label for="username">Password</label>
+                <input type="password" formControlName="password" autocomplete="off">
+                <button class="btn shadow w-100" (click)="register()">Register</button>
+                      <span class="d-block text-center text-info" routerLink="/login">Or Login</span>
+            </form>
+                <small class="text-muted text-center d-block mt-3">Made with <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill text-danger" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                    </svg> | AbdulkadirKG</small>
+                    
+        </div>
+    </div>
+</div>
+
