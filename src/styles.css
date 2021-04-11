@@ -1,90 +1,91 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap");
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 @import "~bootstrap/dist/css/bootstrap.css";
-:root{
-    --defaultFont : 'Poppins', sans-serif ;
-    --defaultBg : url("assets/img/bg.png"), no-repeat;
-    /* --defaultBg : #b4d3ff3b ; */
-    /* --defaultBg : linear-gradient(60deg, rgba(83, 58, 183, 0.37) 0%, rgba(0, 171, 193, 0.37) 100%); ; */
+:root {
+  --defaultFont: "Poppins", sans-serif;
+  /* --defaultBg: url("assets/img/bg.png"), no-repeat; */
+  --defaultBg: url("assets/img/bg.png"), no-repeat;
+  /* --defaultBg : #b4d3ff3b ; */
+  /* --defaultBg : linear-gradient(60deg, rgba(83, 58, 183, 0.37) 0%, rgba(0, 171, 193, 0.37) 100%); ; */
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-family: var(--defaultFont);
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--defaultFont);
 }
 
-a{
-  text-decoration: none!important;
+a {
+  text-decoration: none !important;
   color: black;
 }
 
-body{
-    background: var(--defaultBg)!important;
-    background-size: 25px!important;
+body {
+  background: var(--defaultBg) !important;
+  background-size: 45px !important;
+  text-shadow: 0 0 1px black;
 }
 
 .btn {
-    box-shadow: 0 0 3px 0px #0000001f;
+  box-shadow: 0 0 3px 0px #0000001f;
 }
 
-.no-border{
+.no-border {
   border: none !important;
 }
 
-.f-l{
-    font-weight: lighter!important;
+.f-l {
+  font-weight: lighter !important;
 }
 
-.f-b{
-    font-weight: bold!important;
+.f-b {
+  font-weight: bold !important;
 }
 
-header{
-    color : #fff!important;
+header {
+  color: #fff !important;
 }
 
-.border-main{
-    padding: 5px;
-    border-radius: 7px;
-    border:1px solid rgb(194, 194, 194);
+.border-main {
+  padding: 5px;
+  border-radius: 7px;
+  border: 1px solid rgb(194, 194, 194);
 }
 
-.landing{
-    background: rgb(0, 0, 0);
-    border-radius: 25px;
-    padding: 5px 15px;
-    margin: 5px auto;
-    height: 400px;
-    color : #fff;
-    background-image: url('./assets/img/landing-bg.gif');
-    background-position: right 95px bottom;
-    background-repeat: no-repeat;
+.landing {
+  background: rgb(0, 0, 0);
+  border-radius: 25px;
+  padding: 5px 15px;
+  margin: 5px auto;
+  height: 400px;
+  color: #fff;
+  background-image: url("./assets/img/landing-bg.gif");
+  background-position: right 95px bottom;
+  background-repeat: no-repeat;
 }
-
 
 .waves {
-  position:relative;
+  position: relative;
   width: 100%;
-  height:15vh;
-  margin-bottom:-7px; /*Fix for safari gap*/
-  min-height:100px;
-  max-height:150px;
+  height: 15vh;
+  margin-bottom: -7px; /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
 }
 
 .content {
-  position:relative;
-  height:20vh;
-  text-align:center;
+  position: relative;
+  height: 20vh;
+  text-align: center;
   background-color: rgb(10, 0, 54);
 }
 
 /* Animation */
 
 .parallax > use {
-  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
 .parallax > use:nth-child(1) {
   animation-delay: -2s;
@@ -104,23 +105,22 @@ header{
 }
 @keyframes move-forever {
   0% {
-   transform: translate3d(-90px,0,0);
+    transform: translate3d(-90px, 0, 0);
   }
-  100% { 
-    transform: translate3d(85px,0,0);
+  100% {
+    transform: translate3d(85px, 0, 0);
   }
 }
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
   .waves {
-    height:40px;
-    min-height:40px;
+    height: 40px;
+    min-height: 40px;
   }
   .content {
-    height:30vh;
+    height: 30vh;
   }
   h1 {
-    font-size:24px;
+    font-size: 24px;
   }
 }
-

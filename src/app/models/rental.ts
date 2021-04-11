@@ -1,4 +1,5 @@
-import { Car } from "./car";
+import { Car } from './car';
+import { CarImage } from './carImages';
 
 export class Rental {
   carId: number;
@@ -7,4 +8,17 @@ export class Rental {
   returnDate: Date;
   car: Car;
   carJSON: string;
+
+  brandID: number;
+  brandName: string;
+  carID: number;
+  carImages: CarImage[];
+  carName: string;
+  colorID: number;
+  colorName: string;
+  customerID: number;
+  dailyPrice: number;
+  description: string;
+  id: number;
+  modelYear: number;
 }

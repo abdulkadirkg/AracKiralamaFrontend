@@ -1,1 +1,93 @@
-<p>profile works!</p>
+<app-sub-navi></app-sub-navi>
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-3">
+      <div class="card shadow-sm border w-100">
+        <div class="card-header fw-bold text-center">Profile</div>
+        <div class="card-body p-0">
+          <ul class="list-group ">
+            <li class="list-group-item list-group-item-action text-center">{{ user }}</li>
+            <li class="list-group-item list-group-item-action text-center">My Reservations</li>
+            <li class="list-group-item list-group-item-action text-center">Change Password</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <button (click)="logout()" class="btn fw-bold btn-danger w-100">
+            Logout
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="card shadow-sm border w-100">
+        <div class="card-header fw-bold text-center">Reservations</div>
+        <div class="card-body">
+          <div class="wrapper" *ngFor="let rental of rentalsByUser">
+            <div class="row">
+              <div class="col-4">
+                <img
+                  src="https://localhost:44389/{{
+                    rental.carImages[0].imagePath
+                  }}"
+                  class="w-100 rounded"
+                  alt="car-image"
+                />
+              </div>
+              <div class="col-8">
+                <span class="d-block text-center"
+                  ><b>{{ rental.brandName }}</b> {{ rental.carName }}</span
+                >
+                <span class="small text-muted d-block text-center">{{
+                  rental.description
+                }}</span>
+                <div
+                  class="col-12 small text-dark my-auto align-items-center d-flex justify-content-around"
+                >
+                  <i class="bi bi-gear m-auto"> Manuel</i>
+                  <i class="bi bi-door-closed m-auto"> Gas</i>
+                  <i class="bi bi-wallet2 m-auto"> Economy</i>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-6">
+                    Daily Price:
+                    <b>{{ rental.dailyPrice }} ₺</b>
+                  </div>
+                  <div class="col-6">
+                    Model Year: <b>{{ rental.modelYear }}</b>
+                  </div>
+                </div>
+
+                <div class="row mt-4">
+                  <div class="col-6">
+                    Arrival:
+                    <b class="text-success">{{ rental.rentDate | date }}</b>
+                  </div>
+                  <div class="col-6">
+                    Departure:
+                    <b class="text-danger">{{ rental.returnDate | date }}</b>
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-6">
+                    <button class="btn-outline-danger btn shadow-sm w-100">
+                      Cancel
+                    </button>
+                  </div>
+                  <div class="col-6">
+                    <button class="btn-outline-success btn shadow-sm w-100">
+                      See Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr />
+          </div>
+        </div>
+        <div class="card-footer text-center">
+          Total <b>{{ rentalsByUser?.length }}</b> Reservations.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

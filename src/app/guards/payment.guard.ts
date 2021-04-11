@@ -38,7 +38,7 @@ export class PaymentGuard implements CanActivate {
       ) {
       return true;
     } else {
-      this.router.navigate(['']);
+      // this.router.navigate(['']);
       this.toastrService.error('Araç Seçim Formu Eksik veya Hatalı','HATA');
       return false;
     }
