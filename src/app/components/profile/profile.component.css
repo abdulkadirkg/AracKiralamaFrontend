@@ -45,3 +45,7 @@
 .list-group-item:hover{
     font-weight: 600;
 }
+
+.item i{
+    font-size: 50px;
+}
